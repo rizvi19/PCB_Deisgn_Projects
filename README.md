@@ -18,7 +18,6 @@ This repository contains the design files, schematics, and documentation for a c
 - `/3d_models`: 3D visualization files of the assembled PCB.
 - `/docs`: Project documentation, including the detailed design report (`USB-C_to_UART_Converter_Report.pdf`).
 - `/bom`: Bill of Materials (BOM) listing all components with part numbers and suppliers.
-- `LICENSE`: MIT License for the project.
 
 ## Hardware Overview
 The PCB integrates the following key components:
@@ -69,27 +68,4 @@ The PCB integrates the following key components:
 - **LED Not Lighting:** Check USB power and connections; ensure the LED resistors are properly soldered.
 - **Unstable Operation:** Inspect solder joints and verify that decoupling capacitors are correctly placed.
 
-## Building the PCB
-1. **Order Components:** Refer to the `/bom` directory for the Bill of Materials. Source components from suppliers like DigiKey, Mouser, or LCSC.
-2. **Manufacture the PCB:** Use the Gerber files in `/pcb` to order the PCB from a manufacturer (e.g., JLCPCB, PCBWay).
-3. **Assembly:**
-   - Solder the USB-C receptacle, CP2102, ESD protection IC, capacitors, resistors, LEDs, and pin header.
-   - Use a stencil for surface-mount components (e.g., CP2102) for best results.
-   - Verify all solder joints for continuity and avoid shorts.
-4. **Testing:** After assembly, connect the PCB to a computer and follow the setup instructions above.
 
-## Design Notes
-- **Differential Pair Routing:** USB D+ and D- lines are routed as a 90 Ω differential pair to ensure signal integrity.
-- **Ground Plane:** A continuous ground plane minimizes noise and improves EMI performance.
-- **ESD Protection:** The LESD5D5.0CT1G protects the CP2102 from voltage spikes, enhancing reliability.
-- **Compact Layout:** The PCB is designed for minimal footprint, suitable for integration into larger projects or enclosures.
-
-## Contributing
-Contributions are welcome! Please submit a pull request or open an issue for bug reports, feature requests, or improvements. Ensure any changes are compatible with the existing design and follow the repository’s coding standards.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Acknowledgments
-- Thanks to Silicon Labs for the CP2102 documentation and drivers.
-- Inspired by the need for a modern, reliable USB-to-UART interface for embedded systems development.
